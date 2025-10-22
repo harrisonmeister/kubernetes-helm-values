@@ -3,3 +3,21 @@ image:
   pullPolicy: IfNotPresent
   repository: harrisonmeister/triton-key
   tag: "2025.10.22.1"
+
+ingress:
+  enabled: false
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: triton-key-test.harrisonmeister
+      paths: []
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+service:
+  type: NodePort
+  port: 8080
+  nodePort: 30709
