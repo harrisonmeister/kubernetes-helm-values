@@ -1,0 +1,4 @@
+image:
+  pullPolicy: IfNotPresent
+  repository: harrisonmeister/triton-key
+  tag: "2025.10.22.1"
